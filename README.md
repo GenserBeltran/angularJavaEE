@@ -13,6 +13,7 @@ Se profundiza la app en una arquitectura multicapas light, en el back con JavaEE
     + Pool de conexiones - JTA
 + Capa de negocio o servicio
     + Servicios jax (Rs - Ws) - JavaEE v.8
+    + Servidor Glasfish (V.5.0)
 + Capa de cliente
     + Angular v.8
 ### Autores
