@@ -17,7 +17,7 @@ public class PersonaServiceRs {
     private PersonaService personaService;
 
     @GET
-    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Produces({MediaType.APPLICATION_JSON})
     public List<Persona> listarPersonas() {
         System.out.println("Personas Encontradas: " + personaService.listarPersonas() );
         return personaService.listarPersonas();
@@ -32,8 +32,8 @@ public class PersonaServiceRs {
     }
 
     @POST
-    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Produces({MediaType.APPLICATION_JSON})
+    @Consumes({MediaType.APPLICATION_JSON})
     public Response agregarPersona(Persona persona) {
         try {
             personaService.registrarPersona(persona);
@@ -45,8 +45,8 @@ public class PersonaServiceRs {
     }
 
     @PUT
-    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Produces({MediaType.APPLICATION_JSON})
+    @Consumes({MediaType.APPLICATION_JSON})
     @Path("{id}")
     public Response modificarPersona(@PathParam("id") int id, Persona personaModificada) {
         try {
