@@ -1,9 +1,14 @@
+<div style="text-align: center">
+  <button style="cursor: pointer" (click)="irAgregar()">+</button>
+</div>
+
 <div class="box">
   <div class="item" *ngFor="let persona of personas">
     <ul>
-      <li>
-        {{persona.idPersona}} {{persona.nombre}}
-      </li>
+      <li>{{ persona.idPersona }} {{ persona.nombre }}</li>
     </ul>
   </div>
 </div>
+
+<!--Incrusta el component de formulario-->
+<router-outlet></router-outlet>

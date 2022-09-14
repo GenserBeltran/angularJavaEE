@@ -37,6 +37,7 @@ public class PersonaServiceRs {
     public Response agregarPersona(Persona persona) {
         try {
             personaService.registrarPersona(persona);
+            System.out.println("Persona agregada: " + persona);
             return Response.ok().entity(persona).build();
         } catch (Exception e) {
             e.printStackTrace(System.out);

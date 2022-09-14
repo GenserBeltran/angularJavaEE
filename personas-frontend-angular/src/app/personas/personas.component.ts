@@ -26,4 +26,9 @@ export class PersonasComponent implements OnInit {
         console.log('Personas Obtenidas del suscriber: ' + this.personas);
       });
   }
+
+  irAgregar() {
+    console.log('nos vamos agregar');
+    this.router.navigate(['./personas/agregar']); //paht padre y luego paht hijo
+  }
 }
