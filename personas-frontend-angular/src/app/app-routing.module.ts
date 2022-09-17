@@ -1,6 +1,6 @@
 import { FormularioComponent } from './formulario/formulario.component';
 import { PersonasComponent } from './personas/personas.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
@@ -8,7 +8,10 @@ const routes: Routes = [
   {
     path: 'personas',
     component: PersonasComponent,
-    children: [{ path: 'agregar', component: FormularioComponent }],
+    children: [
+      { path: 'agregar', component: FormularioComponent },
+      { path: ':idPersona', component: FormularioComponent },
+    ],
   },
 ];
 

@@ -27,7 +27,7 @@ public class PersonaServiceRs {
     @Produces({MediaType.APPLICATION_JSON})
     @Path("{id}")//Esto hace referencia  ha el paht de personas y algun parametro (hace referencia a /personas/(id))
     public Persona encontrarPersonaPorId(@PathParam("id") int id) {
-        System.out.println("Persona Encontrada: " + personaService.encontrarPersonaPorId(new Persona(id)));
+        System.out.println("Persona Seleccionada: " + personaService.encontrarPersonaPorId(new Persona(id)));
         return personaService.encontrarPersonaPorId(new Persona(id));
     }
 
