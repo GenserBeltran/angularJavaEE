@@ -54,6 +54,7 @@ public class PersonaServiceRs {
             Persona persona = personaService.encontrarPersonaPorId(new Persona(id));
             if (persona != null) {
                 personaService.modificarPersona(personaModificada);
+                System.out.println("persona modificada:" + personaModificada);
                 return Response.ok().entity(personaModificada).build();
             } else {
                 return Response.status(Status.NOT_FOUND).build();
@@ -69,6 +70,7 @@ public class PersonaServiceRs {
     public Response eliminarPersonaPorId(@PathParam("id") int id) {
         try {
             personaService.eliminarPersona(new Persona(id));
+            System.out.println("persona eliminada con el id:" + id);
             return Response.ok().build();
         } catch (Exception e) {
             e.printStackTrace(System.out);
